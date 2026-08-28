@@ -25,7 +25,7 @@
 
   ---
 
-  ### Cycle 2: Restructing the Toplogy
+  ### Cycle 2: Restructuring the Toplogy
 
   * **Modifications**: Updated metrics for the different psychological labels.
   * **Parameters Used**:
@@ -39,7 +39,7 @@
 
     ```
 
-    * `similarity_threshold = 0.915`(+0.015%)
+    * `similarity_threshold = 0.915`(+0.015)
   * **Outcome**: Achieved a more realistic and messy topological network.
-  * **Insights**: `Impuslive` and `Gambler` profiles have a more stronger links when compared to `Analytical` one.
+  * **Insights**: `Impulsive` and `Gambler` profiles have stronger links when compared to `Analytical` one.
   
