@@ -32,10 +32,10 @@
     * Profiles:
 
     ```py
- 
+      # Features: [Risk Tolerance, Observation Index, Impulsivity]
       0: [0.87, 0.12, 0.95], # Impulsive: Extreme Risk Tolerance and Impulsiveness, Low observation
-      1: [0.2, 0.97, 0.20], # Analytical: Extreme Obv, Low Risk Tolerance and Impulsivness
-      2: [0.73, 0.59, 0.65] # Gambler: High Risk, Moderate Obv(Acts as a middle ground)
+      1: [0.2, 0.97, 0.20],  # Analytical: Extreme Obvservation, Lower Risk Tolerance and Impulsivness
+      2: [0.73, 0.59, 0.65]  # Gambler: High Risk, Moderate Obvseration(Acts as a middle ground)
 
     ```
 
