@@ -66,10 +66,10 @@
         * **Bridge**: The outliers labelled as `Analytical` have been observed to act as rare bridges between the dominant profiles.
     * **t-SNE**:
       * **Parameters Used**:
-        * ``n_components=2``
-        * ``perplexity=30``
-        * ``max_iter=1000``
-        * ``random_state=42``
+        * `n_components=2`
+        * `perplexity=30`
+        * `max_iter=1000`
+        * `random_state=42`
       * **Inference**:
         * **Analytical**: Forms a highly isolated cluster spaced far apart from `Impulsive` and `Gambler`. Zero cross profile links.
         * **Impulsive & Gambler**: `t-SNE` algorithm has successfully segregated these two inter-twined profiles into distinct clusters.
