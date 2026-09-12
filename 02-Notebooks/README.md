@@ -73,4 +73,4 @@
       * **Inference**:
         * **Analytical**: Forms a highly isolated cluster spaced far apart from `Impulsive` and `Gambler`. Zero cross profile links.
         * **Impulsive & Gambler**: `t-SNE` algorithm has successfully segregated these two inter-twined profiles into distinct clusters.
-        * **Bridge**: There is no bridge to link the `Analytical` ones, forming a closed loop 'Echo Chamber'. `Impulsive` and `Gambler` profiles have weak bridges, somewhat showing a degree of correlation.
+        * **Bridge**: The visible bottleneck where the `Impulsive` and `Gambler` clusters bleed into one another perfectly visualizes the engineered 'weak ties' acting as structural bridges.
