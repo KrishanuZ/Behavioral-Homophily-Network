@@ -1,3 +1,5 @@
-# Behavioral Homophily Network: Development Cycle-Phase 2
+# Behavioral Homophily Network
 
-## Cycle 1: Anomaly Injection
+## Development Cycle-Phase 2: Network Analytics and Centrality Metrics
+
+### Cycle 1
