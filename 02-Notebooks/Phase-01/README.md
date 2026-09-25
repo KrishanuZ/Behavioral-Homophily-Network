@@ -3,8 +3,8 @@
 ## Cycle 1: Baseline Topology and Wiring
 
 * **Setup**:
-  * Generation of synthetic network of `150` nodes using three distinct `baseline` psychological profiles.
-  * Wiring the topology using a similarity matrix(`cosine similarity`)[from `sklearn.metrics.pairwise`]
+  * Generated a synthetic network of `150` nodes using three distinct psychological profiles.
+  * Links are created with the help of `cosine similarity`[from `sklearn.metrics.pairwise`]
 * **Parameters Used**:
   * Profiles:
 
@@ -18,12 +18,12 @@
   * `similarity_threshold = 0.90`
   * `layout = nx.spring_layout(G, seed=42)`
 * **Observations**:
-  * **Outcome**: The wiring did not form three perfectly isolated clusters as per the initial hypothesis.
-  * **Insight**: The `Analytical` and `Gambler` profiles formed dense links.
+  * **Outcome**: The graph did not form a close clustered network as per initial assumption.
+  * **Insight**: The `Analytical` and `Gambler` profiles formed denser links.
 
   ---
 
-  ### Cycle 2: Restructuring the Toplogy
+  ### Cycle 2: Restructuring the Network
 
   * **Modifications**: Updated metrics for the different psychological labels.
   * **Parameters Used**:
@@ -37,8 +37,8 @@
 
     ```
 
-    * `similarity_threshold = 0.915`(+0.015)
-  * **Outcome**: Achieved a more realistic and messy topological network.
+    * `similarity_threshold = 0.915`(+0.015) for lesser links based on metrics.
+  * **Outcome**: Obtained a more realistic and messier network.
   * **Insights**: `Impulsive` and `Gambler` profiles have stronger links when compared to `Analytical` one.
   
   ---
@@ -61,7 +61,7 @@
       * **Inference**:
         * **Analytical**: Pushed entirely to the far left of the X-axis. This separation confirms `Analytical` profiles form an 'Echo-Chamber'.
         * **Impulsive & Gambler**: Occupy the same X-axis territory on the right. PCA algorithm was forced to separate them based on Y-axis due to their strong links to slice them apart, since `Node2Vec` maps based on network topology.
-        * **Bridge**: The outliers labelled as `Analytical` have been observed to act as rare bridges between the dominant profiles.
+        * **Bridge**: Some of the `Analytical` profiles seem to generate some kind of links among the other dominant profiles.
     * **t-SNE**:
       * **Parameters Used**:
         * `n_components=2`
@@ -70,5 +70,5 @@
         * `random_state=42`
       * **Inference**:
         * **Analytical**: Forms a highly isolated cluster spaced far apart from `Impulsive` and `Gambler`. Zero cross profile links.
-        * **Impulsive & Gambler**: `t-SNE` algorithm has successfully segregated these two inter-twined profiles into distinct clusters.
-        * **Bridge**: The visible bottleneck where the `Impulsive` and `Gambler` clusters bleed into one another perfectly visualizes the engineered 'weak ties' acting as structural bridges.
+        * **Impulsive & Gambler**: `t-SNE` algorithm has successfully segregated `Impulsive` and `Gambler` profiles into distinct clusters when compared to **PCA**.
+        * **Bridge**: The `Gambler` and `Impulsive` profiles have weak ties with each other as **t-SNE** algorithm have placed these clusters in proximity.
