@@ -40,6 +40,8 @@
     * `similarity_threshold = 0.915`(+0.015) for lesser links based on metrics.
   * **Outcome**: Obtained a more realistic and messier network.
   * **Insights**: `Impulsive` and `Gambler` profiles have stronger links when compared to `Analytical` one.
+
+  ![Graph Network](Graph.png)
   
   ---
 
