@@ -45,32 +45,34 @@
   
   ---
 
-  ### Cycle 3: Embedding
+### Cycle 3: Embedding
 
-  * **Setup**:
-    * **Node2Vec**: Used to flatten the graph into a `150 x 64` matrix.
-  * **Parameters Used**:
-    * `dimensions=64`
-    * `walk_length=30`
-    * `num_walks=200`
-    * `window=10`
+* **Setup**:
+  * **Node2Vec**: Used to flatten the graph into a `150 x 64` matrix.
+* **Parameters Used**:
+  * `dimensions=64`
+  * `walk_length=30`
+  * `num_walks=200`
+  * `window=10`
+* **Visualization**:
+  * **PCA**:
+    * **Parameters Used**:
+      * `n_components=2`
+      * `random_state=42`
+    * **Inference**:
+      * **Analytical**: Pushed entirely to the far left of the X-axis. This separation confirms `Analytical` profiles form an 'Echo-Chamber'.
+      * **Impulsive & Gambler**: Occupy the same X-axis territory on the right. PCA algorithm was forced to separate them based on Y-axis due to their strong links to slice them apart, since `Node2Vec` maps based on network topology.
+      * **Bridge**: Some of the `Analytical` profiles seem to generate some kind of links among the other dominant profiles.
+  * **t-SNE**:
+    * **Parameters Used**:
+      * `n_components=2`
+      * `perplexity=30`
+      * `max_iter=1000`
+      * `random_state=42`
+    * **Inference**:
+      * **Analytical**: Forms a highly isolated cluster spaced far apart from `Impulsive` and `Gambler`. Zero cross profile links.
+      * **Impulsive & Gambler**: `t-SNE` algorithm has successfully segregated `Impulsive` and `Gambler` profiles into distinct clusters when compared to **PCA**.
+      * **Bridge**: The `Gambler` and `Impulsive` profiles have weak ties with each other as **t-SNE** algorithm have placed these clusters in proximity.
 
-  * **Visualization**:
-    * **PCA**:
-      * **Parameters Used**:
-        * `n_components=2`
-        * `random_state=42`
-      * **Inference**:
-        * **Analytical**: Pushed entirely to the far left of the X-axis. This separation confirms `Analytical` profiles form an 'Echo-Chamber'.
-        * **Impulsive & Gambler**: Occupy the same X-axis territory on the right. PCA algorithm was forced to separate them based on Y-axis due to their strong links to slice them apart, since `Node2Vec` maps based on network topology.
-        * **Bridge**: Some of the `Analytical` profiles seem to generate some kind of links among the other dominant profiles.
-    * **t-SNE**:
-      * **Parameters Used**:
-        * `n_components=2`
-        * `perplexity=30`
-        * `max_iter=1000`
-        * `random_state=42`
-      * **Inference**:
-        * **Analytical**: Forms a highly isolated cluster spaced far apart from `Impulsive` and `Gambler`. Zero cross profile links.
-        * **Impulsive & Gambler**: `t-SNE` algorithm has successfully segregated `Impulsive` and `Gambler` profiles into distinct clusters when compared to **PCA**.
-        * **Bridge**: The `Gambler` and `Impulsive` profiles have weak ties with each other as **t-SNE** algorithm have placed these clusters in proximity.
+![PCA](PCA-Projection.png)
+![t-SNE](t-SNE.png)
