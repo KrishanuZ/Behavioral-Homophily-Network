@@ -1,8 +1,6 @@
-# Behavioral Homophily Network
+# Behavioral Homophily Network: Development Cycle-Phase 02
 
-## Development Cycle-Phase 2: Network Analytics and Centrality Metrics
-
-### Cycle 1
+## Cycle 1: Network Analytics and Centrality Metrics
 
 * **Setup**: Visualization of Network Centrality Metrics using **Violin Plots**.
 * **Parameters**: `Degree Centrality`, `Betweenness`, and `Clustering Coefficient`.
