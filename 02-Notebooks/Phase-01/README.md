@@ -1,4 +1,4 @@
-# Behavioral Homophily Network: Development Cycle-Phase 1
+# Behavioral Homophily Network: Development Cycle-Phase 01
 
 ## Cycle 1: Baseline Topology and Wiring
 
