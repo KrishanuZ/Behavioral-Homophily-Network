@@ -45,4 +45,5 @@ profiles = [
 plt.legend(handles=profiles, loc='upper right', title='Profiles')
 plt.tight_layout()
 
+# Pushing to streamlit
 st.pyplot(fig)
