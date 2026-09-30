@@ -38,6 +38,8 @@ elif metric == "Betweenness":
 else:
     metric_dict = nx.clustering(G)
     
+node_sizes = [(metric_dict[node] * 1000) + 50 for node in G.nodes()] # Centrality scores: [0,1]; multiplying with 1000 to scale it up
+    
 color = ["#ff0000" if label == 0 else "#de00fc" if label == 1 else "#38F100" for label in node_labels]
 
 nx.draw_networkx_nodes(G, pos, node_color=color, node_size=100)
