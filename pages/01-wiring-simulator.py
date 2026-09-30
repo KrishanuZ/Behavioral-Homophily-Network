@@ -30,6 +30,14 @@ for i in range(num_nodes):
 fig, ax = plt.subplots(figsize=(10, 8)) # Newly added line
 pos = nx.spring_layout(G, seed=42)
 
+# Add conditions for the selectbox, according to the available options:
+if metric == "Degree":
+    metric_dict = nx.degree_centrality(G)
+elif metric == "Betweenness":
+    metric_dict = nx.betweeness_centrality(G)
+else:
+    metric_dict = nx.clustering(G)
+    
 color = ["#ff0000" if label == 0 else "#de00fc" if label == 1 else "#38F100" for label in node_labels]
 
 nx.draw_networkx_nodes(G, pos, node_color=color, node_size=100)
@@ -47,3 +55,4 @@ plt.tight_layout()
 
 # Pushing to streamlit
 st.pyplot(fig)
+
