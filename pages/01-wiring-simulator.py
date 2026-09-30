@@ -8,7 +8,7 @@ from matplotlib.lines import Line2D
 st.title("Wiring Simulator")
 
 threshold = st.slider("Similarity Threshold", min_value=0.8, max_value=0.99, value=0.915)
-metric = st.selectbox("Choose Metric", ["Degree", "Betweenness", "Clustering Coefficient"])
+# metric = st.selectbox("Choose Metric", ["Degree", "Betweenness", "Clustering Coefficient"])
 
 # code lines from 02-Notebooks/Phase-01/02-wiring.ipynb
 node_labels = np.load('01-Dataset/node_labels.npy')
