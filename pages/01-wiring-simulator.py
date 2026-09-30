@@ -8,7 +8,7 @@ from matplotlib.lines import Line2D
 st.title("Wiring Simulator")
 
 threshold = st.slider("Similarity Threshold", min_value=0.8, max_value=0.99, value=0.915)
-# metric = st.selectbox("Choose Metric", ["Degree", "Betweenness", "Clustering Coefficient"])
+metric = st.selectbox("Choose Metric", ["Degree", "Betweenness", "Clustering Coefficient"])
 
 # code lines from 02-Notebooks/Phase-01/02-wiring.ipynb
 node_labels = np.load('01-Dataset/node_labels.npy')
@@ -42,7 +42,7 @@ node_sizes = [(metric_dict[node] * 1000) + 50 for node in G.nodes()] # Centralit
     
 color = ["#ff0000" if label == 0 else "#de00fc" if label == 1 else "#38F100" for label in node_labels]
 
-nx.draw_networkx_nodes(G, pos, node_color=color, node_size=100)
+nx.draw_networkx_nodes(G, pos, node_color=color, node_size=node_sizes)
 nx.draw_networkx_edges(G, pos, alpha=0.2)
 plt.title('The Network', fontsize=16)
 
