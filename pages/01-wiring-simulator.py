@@ -34,7 +34,7 @@ pos = nx.spring_layout(G, seed=42)
 if metric == "Degree":
     metric_dict = nx.degree_centrality(G)
 elif metric == "Betweenness":
-    metric_dict = nx.betweeness_centrality(G)
+    metric_dict = nx.betweenness_centrality(G)
 else:
     metric_dict = nx.clustering(G)
     
